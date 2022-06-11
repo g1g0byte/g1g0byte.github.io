@@ -1,0 +1,345 @@
+[data-theme="dark"] {
+    --body-color: rgb(0,0,0);
+    --text-color: rgb(255, 255, 255);
+    --text-font: 'Montserrat', sans-serif;
+    --p-weight: 300;
+    --h2-weight: 400;
+    --text-weight-change: 0;
+    --nav-background-color: rgb(20, 20, 20);
+    --hamburger-icon-color: rgb(255, 255, 255);
+    --section-color: rgb(2, 1, 1);
+    --title-default-color: rgb(81, 170, 230);
+    --title-text-color: rgb(255, 255, 255);
+    --title-gradient: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf);
+    --grade-border: 1px solid lightgrey;
+    --grade-shadow: 0 0 3px 0 white;
+    --footer-background-color: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    --icon-color: rgb(255, 255, 255);
+}
+
+[data-theme="light"] {
+    --body-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-font: 'Montserrat', sans-serif;
+    --p-weight: 500;
+    --h2-weight: 600;
+    --nav-background-color: rgb(235, 235, 235);
+    --hamburger-icon-color: rgb(0,0,0);
+    --section-color: rgb(255, 255, 255);
+    --title-default-color: rgb(81, 170, 230);
+    --title-text-color: rgb(255, 255, 255);
+    --title-gradient: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf);
+    --grade-border: 2px solid rgb(0, 0, 0);
+    --grade-shadow: 0 0 3px 0 rgb(0, 0, 0);
+    --footer-background-color: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    --icon-color: rgb(255, 255, 255);
+}
+
+
+html {scroll-behavior: smooth;}
+
+body {
+    background-color: var(--body-color);
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, a, label {
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+p {
+    font-weight: var(--p-weight);
+    font-size: calc(30% + 1vw);
+}
+
+h2 {
+    font-weight: var(--h2-weight);
+    font-size: calc(50% + 1vw);
+}
+
+h1, h2, h3, #title {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#scroll-down-arrow, #scroll-up-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--icon-color);
+    text-decoration: none;
+}
+
+#scroll-down-arrow {
+    position: absolute;
+    top: 80%;
+    font-size:calc(50% + 3vw);
+}
+
+#scroll-up-arrow {
+    display: none;
+    position: fixed;
+    top: 90%;
+    font-size:calc(50% + 3vw);
+    opacity: 70%;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    background-color: var(--nav-background-color);
+    box-shadow: 0 0 20px 0 black;
+    transition: top 0.5s;
+    padding: 20px;
+    z-index: 1;
+}
+
+.navbarItems {
+    display:flex;
+}
+
+.navbarLink {
+    padding-right: 40px;
+    color: var(--icon-color);
+}
+
+.navbarLink a{
+    text-decoration: none;
+}
+
+#hamburger-icon {
+    font-size: 25px;
+    color: var(--hamburger-icon-color);
+}
+
+.navbarLink-toggle {
+    display: none;
+}
+
+.navAnchor h2 {
+    padding-top: 
+    80px; 
+    margin-top: -80px;
+}
+
+#gradientButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+#toggleGradientButton {
+    font-size: 1em;
+    z-index: 2;
+}
+
+.section {
+    margin: auto;
+    width: 90%;
+    margin-top: 300px;
+    padding: 15px;
+    background-color: var(--section-color);
+}
+
+#gradesSection {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.grade {
+    padding: 10px;
+    margin: 10px;
+    border: var(--grade-border);
+    box-shadow: var(--grade-shadow);
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    height: 100vh;
+    min-width: 100%;
+    margin: 0;
+    background-color: var(--title-default-color);
+}
+
+.gradientAnimation {
+    background: var(--title-gradient);
+    background-size: 300% 300%;
+    background-attachment: fixed;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+#title h1 {
+    display: flex;
+    justify-content: center;
+
+    color: var(--title-text-color);
+    font-weight: 400;
+    font-size:calc(100% + 5vw);
+    padding-top: 10vh;
+    margin: 0;
+}
+
+.section {
+    display: block;
+    position: relative;
+    top: -60px;
+}
+
+.title-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.title-icons-container em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.icon{
+    color: var(--icon-color);
+    font-size:calc(50% + 3vw);
+    margin: 10px;
+    text-decoration: none;
+}
+
+.icon p{
+    line-height: 0; 
+    font-size: 0;
+    color: transparent; 
+}
+
+.button {
+    background-color: rgb(2, 1, 1);
+    border: 2px solid rgb(2, 1, 1);
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.footer_icon{
+    color: var(--icon-color);
+    font-size:3rem;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    height: 200px;
+    margin-top: 300px;
+    flex: 1;
+    background-image: var(--footer-background-color);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar, .navbarItems {
+        flex-direction: column;
+    }
+        
+    .navbarItems {
+        display:none;
+    }
+        
+    .navbarToggleShow {
+        display: flex;
+        height: 100vh;
+        padding-top: 10vh;
+    }
+
+    .navbarToggleShow .navbarLink{
+        align-self: flex-start;
+        font-size:calc(100% + 3vw);
+        margin-bottom: 7vh;
+    }
+
+    .navbarLink-toggle {
+        align-self: flex-end;
+        display: initial;
+        cursor: pointer;
+    } 
+
+    .section {
+        width: 90vw;
+        margin-top: 40px
+    }
+
+    #gradientButtonContainer {
+        padding-top: 0.5vh;
+    }
+
+    #aboutMeSection {
+        margin-top: 100px
+    }
+
+    #title {
+        font-size:calc(10% + 4vw);
+        padding-top: 0px;
+        margin-bottom: 5vh;
+    }
+
+    p {
+        font-size: calc(30% + 2vw);
+    }
+
+    h2 {
+        font-size: calc(50% + 2vw);
+    }
+
+    .icon{
+        font-size:calc(50% + 5vw);
+    }
+}
+
+/* Title background animation */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
